@@ -41,7 +41,7 @@ export function validateTemplate(t) {
     if (!cat.key || !cat.name || keys.has('c:' + cat.key)) throw new Error('Categoria duplicada/inválida.');
     keys.add('c:' + cat.key);
     for (const ch of cat.channels ?? []) {
-      if (!ch.key || !ch.name || keys.has('c:' + ch.key) || !(ch.type ?? 'text' in kinds)) throw new Error('Canal inválido/duplicado: ' + ch.name);
+      if (!ch.key || !ch.name || keys.has('c:' + ch.key) || !((ch.type ?? 'text') in kinds)) throw new Error('Canal inválido/duplicado: ' + ch.name);
       keys.add('c:' + ch.key);
     }
   }
