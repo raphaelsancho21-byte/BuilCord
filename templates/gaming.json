@@ -1,0 +1,172 @@
+{
+  "name": "🎮 Gaming",
+  "settings": {
+    "autorole": "membro"
+  },
+  "roles": [
+    {
+      "key": "admin",
+      "name": "👑 Administração",
+      "color": "#ed4245",
+      "permissions": []
+    },
+    {
+      "key": "moderador",
+      "name": "🛡️ Moderação",
+      "color": "#fee75c",
+      "permissions": [
+        "ManageMessages",
+        "ModerateMembers"
+      ]
+    },
+    {
+      "key": "staff",
+      "name": "🎫 Suporte",
+      "color": "#57f287",
+      "permissions": []
+    },
+    {
+      "key": "verificado",
+      "name": "✅ Verificado",
+      "color": "#5865f2",
+      "permissions": []
+    },
+    {
+      "key": "membro",
+      "name": "👤 Membro",
+      "color": "#99aab5",
+      "permissions": []
+    }
+  ],
+  "categories": [
+    {
+      "key": "inicio",
+      "name": "📌・INFORMAÇÕES",
+      "channels": [
+        {
+          "key": "regras",
+          "name": "📜・regras",
+          "type": "text",
+          "message": {
+            "title": "📜 Regras",
+            "description": "Respeite todos, evite spam e assédio, não compartilhe informações privadas e siga as regras do Discord."
+          },
+          "pin": true,
+          "overwrites": {
+            "everyone": {
+              "deny": [
+                "SendMessages"
+              ]
+            }
+          }
+        },
+        {
+          "key": "avisos",
+          "name": "📢・anúncios",
+          "type": "text",
+          "overwrites": {
+            "everyone": {
+              "deny": [
+                "SendMessages"
+              ]
+            }
+          }
+        },
+        {
+          "key": "verificacao",
+          "name": "✅・verificação",
+          "type": "text",
+          "overwrites": {
+            "everyone": {
+              "deny": [
+                "SendMessages"
+              ]
+            }
+          }
+        },
+        {
+          "key": "boas_vindas",
+          "name": "👋・boas-vindas",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "key": "bate_papo",
+      "name": "💬・CONVERSAS",
+      "channels": [
+        {
+          "key": "geral",
+          "name": "💬・geral",
+          "type": "text"
+        },
+        {
+          "key": "midias",
+          "name": "📸・mídias",
+          "type": "text"
+        },
+        {
+          "key": "voz",
+          "name": "🎙️・voz",
+          "type": "voice"
+        }
+      ]
+    },
+    {
+      "key": "atendimento",
+      "name": "🎫・SUPORTE",
+      "channels": [
+        {
+          "key": "tickets",
+          "name": "🎫・tickets",
+          "type": "text",
+          "overwrites": {
+            "everyone": {
+              "deny": [
+                "SendMessages"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "equipe",
+      "name": "🔒・EQUIPE",
+      "overwrites": {
+        "everyone": {
+          "deny": [
+            "ViewChannel"
+          ]
+        },
+        "admin": {
+          "allow": [
+            "ViewChannel"
+          ]
+        },
+        "moderador": {
+          "allow": [
+            "ViewChannel"
+          ]
+        },
+        "staff": {
+          "allow": [
+            "ViewChannel"
+          ]
+        }
+      },
+      "channels": [
+        {
+          "key": "staff_chat",
+          "name": "🛡️・staff",
+          "type": "text"
+        },
+        {
+          "key": "logs",
+          "name": "📋・logs",
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}

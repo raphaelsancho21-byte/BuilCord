@@ -1,0 +1,17 @@
+name: Node syntax and templates
+on:
+  push:
+  pull_request:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: package.json
+      - run: npm install
+      - run: npm run check
+      - run: node --input-type=module -e "import fs from 'node:fs'; import {validateTemplate} from './src/engine.js'; for(const file of fs.readdirSync('templates')) if(file.endsWith('.json')) validateTemplate(JSON.parse(fs.readFileSync('templates/'+file))); console.log('Templates válidos')"

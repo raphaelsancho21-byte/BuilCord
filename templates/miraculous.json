@@ -1,0 +1,232 @@
+{
+  "name": "🐞 Miraculous RP",
+  "settings": {
+    "autorole": "membro"
+  },
+  "roles": [
+    {
+      "key": "admin",
+      "name": "👑 Guardiões",
+      "color": "#e53935",
+      "hoist": true,
+      "permissions": []
+    },
+    {
+      "key": "moderador",
+      "name": "🛡️ Moderadores",
+      "color": "#ffca28",
+      "hoist": true,
+      "permissions": [
+        "ManageMessages",
+        "ModerateMembers"
+      ]
+    },
+    {
+      "key": "staff",
+      "name": "🎫 Equipe de suporte",
+      "color": "#7e57c2",
+      "permissions": []
+    },
+    {
+      "key": "verificado",
+      "name": "✅ Verificado",
+      "color": "#29b6f6",
+      "permissions": []
+    },
+    {
+      "key": "membro",
+      "name": "🐞 Cidadão de Paris",
+      "color": "#ef5350",
+      "permissions": []
+    },
+    {
+      "key": "heroi",
+      "name": "✨ Heróis",
+      "color": "#66bb6a",
+      "permissions": []
+    },
+    {
+      "key": "vilao",
+      "name": "🦋 Akumatizados",
+      "color": "#ab47bc",
+      "permissions": []
+    }
+  ],
+  "categories": [
+    {
+      "key": "inicio",
+      "name": "📍・BEM-VINDO A PARIS",
+      "channels": [
+        {
+          "key": "regras",
+          "name": "📜・regras",
+          "type": "text",
+          "topic": "Regras e convivência na comunidade",
+          "message": {
+            "title": "🐞 Regras de Paris",
+            "description": "**1.** Respeite todos.\n**2.** Não faça spam ou golpes.\n**3.** Nada de divulgação sem autorização.\n**4.** Mantenha o RP nos canais adequados.\n**5.** Siga as regras do Discord.\n\nBem-vindo a Paris!"
+          },
+          "pin": true,
+          "overwrites": {
+            "everyone": {
+              "deny": [
+                "SendMessages"
+              ]
+            }
+          }
+        },
+        {
+          "key": "avisos",
+          "name": "📢・anúncios",
+          "type": "text",
+          "overwrites": {
+            "everyone": {
+              "deny": [
+                "SendMessages"
+              ]
+            }
+          }
+        },
+        {
+          "key": "verificacao",
+          "name": "✅・verificação",
+          "type": "text",
+          "overwrites": {
+            "everyone": {
+              "deny": [
+                "SendMessages"
+              ]
+            }
+          }
+        },
+        {
+          "key": "boas_vindas",
+          "name": "👋・boas-vindas",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "key": "comunidade",
+      "name": "💬・COMUNIDADE",
+      "channels": [
+        {
+          "key": "geral",
+          "name": "💬・chat-geral",
+          "type": "text",
+          "topic": "Converse sobre Miraculous, episódios e personagens"
+        },
+        {
+          "key": "teorias",
+          "name": "🔎・teorias",
+          "type": "text"
+        },
+        {
+          "key": "fanarts",
+          "name": "🎨・fanarts",
+          "type": "text"
+        },
+        {
+          "key": "midias",
+          "name": "📸・mídias",
+          "type": "text"
+        },
+        {
+          "key": "voz",
+          "name": "🎤・praça-de-paris",
+          "type": "voice"
+        }
+      ]
+    },
+    {
+      "key": "rp",
+      "name": "🎭・ROLEPLAY",
+      "channels": [
+        {
+          "key": "fichas",
+          "name": "🪪・fichas",
+          "type": "text"
+        },
+        {
+          "key": "rp_chat",
+          "name": "🏙️・ruas-de-paris",
+          "type": "text"
+        },
+        {
+          "key": "rp_missao",
+          "name": "⚔️・missões",
+          "type": "text"
+        },
+        {
+          "key": "rp_voz",
+          "name": "🎙️・interpretação",
+          "type": "voice"
+        }
+      ]
+    },
+    {
+      "key": "atendimento",
+      "name": "🎟️・ATENDIMENTO",
+      "channels": [
+        {
+          "key": "tickets",
+          "name": "🎫・abrir-ticket",
+          "type": "text",
+          "overwrites": {
+            "everyone": {
+              "deny": [
+                "SendMessages"
+              ]
+            }
+          }
+        },
+        {
+          "key": "faq",
+          "name": "❓・perguntas",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "key": "equipe",
+      "name": "🔒・EQUIPE",
+      "overwrites": {
+        "everyone": {
+          "deny": [
+            "ViewChannel"
+          ]
+        },
+        "admin": {
+          "allow": [
+            "ViewChannel",
+            "SendMessages"
+          ]
+        },
+        "moderador": {
+          "allow": [
+            "ViewChannel",
+            "SendMessages"
+          ]
+        },
+        "staff": {
+          "allow": [
+            "ViewChannel",
+            "SendMessages"
+          ]
+        }
+      },
+      "channels": [
+        {
+          "key": "staff_chat",
+          "name": "🛡️・chat-staff",
+          "type": "text"
+        },
+        {
+          "key": "logs",
+          "name": "📋・logs",
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}
